@@ -1,7 +1,7 @@
 const Mail = require('../../lib/Mail');
 
-class SendMailController {
-  async sendMail(req, res) {
+class AvisosController {
+  async store(req, res) {
     const { description, total } = req.body;
 
     await Mail.sendMail({
@@ -14,4 +14,4 @@ class SendMailController {
   }
 }
 
-module.exports = new SendMailController();
+module.exports = new AvisosController();

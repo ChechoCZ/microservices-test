@@ -2,8 +2,8 @@ const { Router } = require('express');
 
 const routes = new Router();
 
-const SendMailController = require('./app/controllers/SendMailController');
+const AvisosController = require('./app/controllers/AvisosController');
 
-routes.post('/avisos', SendMailController.sendMail);
+routes.post('/avisos', AvisosController.store);
 
 module.exports = routes;

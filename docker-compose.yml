@@ -1,17 +1,19 @@
-version: '3'
+version: '2'
 services: 
-  db:
+  mongo:
     image: mongo
     ports: 
-      "27017:27017"
+      - 27017:27017
   compras:
     build: ./compras
     ports: 
-      "3000:3000"
+      - 3000:3000
     depends_on: 
-      -db
+      - mongo
+      - avisos
     environment: 
-      MONGO_URL=mongodb://db/todocartoes
+      - MONGO_URL=mongodb://mongo/todocartoes
   avisos:
     build: ./avisos
-    ports: "3001:3001"
+    ports: 
+      - 3001:3001

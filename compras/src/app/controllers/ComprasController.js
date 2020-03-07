@@ -4,12 +4,6 @@ const Compra = require('../models/compra');
 const Status = require('../models/status');
 
 class ComprasController {
-  async index(req, res) {
-    const compras = await Status.find().populate('compra_id', ['description', 'total']);
-
-    res.json(compras);
-  }
-
   async store(req, res) {
     const compra = await Compra.create(req.body);
 
@@ -31,14 +25,6 @@ class ComprasController {
     }, 60000);
 
     return res.json(compra);
-  }
-
-  async show(req, res) {
-    const compra = await Status.findOne({ 
-      compra_id: req.params.id
-    }).populate('compra_id', ['description', 'total']);
-
-    res.json(compra);
   }
 
   async destroy(req, res) {
