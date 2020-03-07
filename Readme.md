@@ -17,7 +17,7 @@ This app intends to recreate a purchase scenario. It receives the purchase inten
 ### First step:
 Within **compras** directory, there is a file named `.env.example` and another `.env.test.example`. You should rename those files to `.env` and `.env.test` and set MONGO_URL according to your configuration. The `.env.test` intends to load a different database to run the tests.
 
-In **avisos** directory there are fields to set the email configuration. I strongly recommend to use [mailtrap](mailtrap.io). This fakes an inbox and gives you the credentials and configuration necessary to set the environment.
+In **avisos** directory also rename the `.env.example` to `.env`. There are fields to set the email configuration. I strongly recommend to use [mailtrap](mailtrap.io). This fakes an inbox and gives you the credentials and configuration necessary to set the environment.
 
 ### Second setp:
 CD into **compras** directory:
