@@ -1,7 +1,0 @@
-/__tests__/coverage
-/node_modules
-
-Dockerfile
-yarn.lock
-
-.env
